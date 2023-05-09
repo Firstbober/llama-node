@@ -86,6 +86,8 @@ fn main() {
         command.arg("-DLLAMA_CUBLAS=ON");
     }
 
+    command.arg("-DLLAMA_CLBLAST=ON");
+
     #[allow(unused_mut, unused_assignments)]
     let mut link_type = "-DLLAMA_STATIC=ON";
     #[cfg(feature = "dynamic")]
